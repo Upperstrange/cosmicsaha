@@ -10,12 +10,17 @@ export function loadPlayerSprite(scene, shipUrl, glowUrl) {
     ship.scale.set(2, 2, 1); // adjust size as you want
     player.add(ship);
 
-    // Engine glow sprite
-    const glowTexture = textureLoader.load(glowUrl);
-    const glowMaterial = new THREE.SpriteMaterial({ map: glowTexture, transparent: true });
-    const glow = new THREE.Sprite(glowMaterial);
+    // glow of engine
+    const glowTexture = new THREE.TextureLoader().load(glowUrl);
+    const spriteMat = new THREE.SpriteMaterial({
+        map: glowTexture,
+        transparent: true,
+        opacity: 0.8
+    });
+    const glow = new THREE.Sprite(spriteMat);
     glow.scale.set(1, 1, 1);
-    glow.position.set(0, -0.8, 0); // adjust based on your PNG
+    glow.position.set(0, 0, 1.2); // tweak based on your model
+
     player.add(glow);
 
     scene.add(player);
