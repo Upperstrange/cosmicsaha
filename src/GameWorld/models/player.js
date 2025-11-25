@@ -1,29 +1,24 @@
-// Player Ship (Procedural Group)
 export const player = new THREE.Group();
 
-export function loadPlayerModel(scene, url) {
-    const loader = new THREE.GLTFLoader();
+export function loadPlayerSprite(scene, shipUrl, glowUrl) {
+    const textureLoader = new THREE.TextureLoader();
 
-    loader.load(
-        url,
-        gltf => {
-            const model = gltf.scene;
+    // Ship sprite
+    const shipTexture = textureLoader.load(shipUrl);
+    const shipMaterial = new THREE.SpriteMaterial({ map: shipTexture, transparent: true });
+    const ship = new THREE.Sprite(shipMaterial);
+    ship.scale.set(2, 2, 1); // adjust size as you want
+    player.add(ship);
 
-            // Optional: scale + rotate depending on your model
-            model.scale.set(1, 1, 1);
-            model.rotation.x = Math.PI / 2;
+    // Engine glow sprite
+    const glowTexture = textureLoader.load(glowUrl);
+    const glowMaterial = new THREE.SpriteMaterial({ map: glowTexture, transparent: true });
+    const glow = new THREE.Sprite(glowMaterial);
+    glow.scale.set(1, 1, 1);
+    glow.position.set(0, -0.8, 0); // adjust based on your PNG
+    player.add(glow);
 
-            player.add(model);
-
-            scene.add(player);
-        },
-        xhr => {
-            console.log(`Player model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
-        },
-        err => {
-            console.error("Failed to load player model", err);
-        }
-    );
+    scene.add(player);
 }
 
 export function addPlayer(scene) {

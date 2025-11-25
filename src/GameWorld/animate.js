@@ -1,5 +1,5 @@
 import sfx from "../Audio/sfx.js";
-import { spawnRate, baseSpeed as baseSpeedDefault, state, obstacles, collectibles } from "./constants.js";
+import { spawnRate, baseSpeed as baseSpeedDefault, state } from "./constants.js";
 import { loopActions } from "./actions/loop-actions.js";
 import { controlActions } from "./actions/control-actions.js";
 import { renderActions } from "./actions/render-actions.js";
