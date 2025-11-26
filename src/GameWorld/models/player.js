@@ -1,4 +1,37 @@
+import * as THREE from 'three';
+import {modelLoader} from "./model-loader.js";
+
+
 export const player = new THREE.Group();
+
+export function loadPlayerModel(scene, url, scale) {
+    modelLoader.load(
+        url,
+        gltf => {
+            const model = gltf.scene;
+
+            model.rotation.x = 0;
+            model.rotation.y = Math.PI;
+
+            // Optional: adjust pitch if it's nose-up/down
+            // model.rotation.x = -Math.PI / 2;
+
+            model.scale.set(scale, scale, scale);
+
+            model.position.set(0, 0, 0); 
+
+            player.add(model);
+
+            scene.add(player);
+        },
+        xhr => {
+            console.log(`Player model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
+        },
+        err => {
+            console.error("Failed to load player model", err);
+        }
+    );
+}
 
 export function loadPlayerSprite(scene, shipUrl, glowUrl) {
     const textureLoader = new THREE.TextureLoader();

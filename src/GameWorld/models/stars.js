@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+
 export const starMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.1 });
 export const starGeo = new THREE.BufferGeometry();
 export const stars = new THREE.Points(starGeo, starMat);

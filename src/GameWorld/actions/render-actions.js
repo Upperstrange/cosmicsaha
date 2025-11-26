@@ -2,6 +2,7 @@ import {collectibleMat} from "../models/collectibles.js";
 import {obstacleMat} from "../models/obstacles.js";
 import { obstacles, collectibles, particles } from "../constants.js";
 import { scene } from "../world.js";
+import * as THREE from 'three';
 
 export const renderActions = {
     spawnCollectible() {

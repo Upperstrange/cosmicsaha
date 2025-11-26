@@ -2,6 +2,7 @@ import { keys, state } from "../constants.js";
 import { camera } from "../core/camera.js";
 import { player } from "../models/player.js";
 import { renderer } from "../core/renderer.js";
+import * as THREE from 'three';
 
 export const controlActions = {
     updateKeyboardInput() {
