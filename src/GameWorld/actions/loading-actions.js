@@ -1,11 +1,11 @@
-import { state, spawnRate, baseSpeed as baseSpeedDefault, keys } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
+import { state, spawnRate, baseSpeed as baseSpeedDefault, keys, basemodel } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
 import sfx from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/sfx.js";
 import dom from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/dom.js";
 import { gameplayActions } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/actions/gameplay-actions.js";
 
 
 export const loadingActions = {
-    loadGame(){
+    loadGame() {
         this.loadDifficulty();
         this.loadUIEvents();
     },
@@ -69,6 +69,18 @@ export const loadingActions = {
 
                 state.speed = baseSpeed;
                 console.log('Difficulty:', diff, 'Speed:', baseSpeed, 'Spawns:', spawnRate);
+            });
+        });
+    },
+    loadPlayerModel() {
+        const modelButtons = document.querySelectorAll('#player-chips .chip');
+        modelButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modelButtons.forEach(b => b.classList.remove('bg-gray-700'));
+                btn.classList.add('bg-gray-700');
+
+                basemodel = btn.dataset.model;
+                console.log('Model:', basemodel);
             });
         });
     },

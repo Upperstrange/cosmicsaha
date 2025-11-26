@@ -16,6 +16,8 @@ export const state = {
     targetY: 0
 };
 
+export let basemodel = 'slong';
+
 export let obstacles = [];
 export let collectibles = [];
 export let particles = [];

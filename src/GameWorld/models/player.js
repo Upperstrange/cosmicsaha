@@ -1,44 +1,36 @@
 import * as THREE from 'three';
-import { textureLoader, modelLoader } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/loaders.js";
+import { modelLoader } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/loaders.js";
 
 export const player = new THREE.Group();
 
-// export function addPlayer(scene, { modelUrl = '', spriteUrl = '', modelScale = 0.3, spriteScale = 1.5 }) {
-//     modelLoader.load(
-//         modelUrl,
-//         gltf => {
-//             const model = gltf.scene;
+export function addModel(scene, { modelUrl = '', modelScale = 0.3 }) {
+    modelLoader.load(
+        modelUrl,
+        gltf => {
+            const model = gltf.scene;
 
-//             model.rotation.x = 0;
-//             model.rotation.y = Math.PI;
+            model.rotation.x = 0;
+            model.rotation.y = Math.PI;
 
-//             // Optional: adjust pitch if it's nose-up/down
-//             // model.rotation.x = -Math.PI / 2;
+            // Optional: adjust pitch if it's nose-up/down
+            // model.rotation.x = -Math.PI / 2;
 
-//             model.scale.set(modelScale, modelScale, modelScale);
-//             model.position.set(0, 0, 0);
+            model.scale.set(modelScale, modelScale, modelScale);
+            model.position.set(0, 0, 0);
 
-//             player.add(model);
+            player.add(model);
+            scene.add(player);
+        },
+        xhr => {
+            // console.log(`Player model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
+        },
+        err => {
+            console.error("Failed to load player model", err);
+        }
+    );
+}
 
-//             const texture = textureLoader.load(spriteUrl);
-//             const material = new THREE.SpriteMaterial({ map: texture, transparent: true });
-//             const sprite = new THREE.Sprite(material);
-//             sprite.scale.set(spriteScale, spriteScale, spriteScale);
-//             sprite.position.set(0, 0, 1);
-
-//             player.add(sprite);
-//             scene.add(player);
-//         },
-//         xhr => {
-//             // console.log(`Player model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
-//         },
-//         err => {
-//             console.error("Failed to load player model", err);
-//         }
-//     );
-// }
-
-export function addPlayer(scene) {
+export function addSlong(scene) {
     // Balls
     const ballGeo = new THREE.SphereGeometry(0.45, 16, 16);
     const ballMat = new THREE.MeshStandardMaterial({ color: 0xcc8866, roughness: 0.5 });
@@ -134,35 +126,3 @@ export function addPlayer(scene) {
 
     scene.add(player);
 }
-
-
-// export function addPlayer(scene) {
-//     // Main Body
-//     const bodyGeo = new THREE.ConeGeometry(0.5, 2, 8);
-//     const bodyMat = new THREE.MeshStandardMaterial({ color: 0x00ffff, roughness: 0.4, metalness: 0.8 });
-//     const body = new THREE.Mesh(bodyGeo, bodyMat);
-//     body.rotation.x = Math.PI / 2;
-//     body.rotation.z = Math.PI;
-//     player.add(body);
-
-//     // Wings
-//     const wingGeo = new THREE.BoxGeometry(2, 0.1, 1);
-//     const wingMat = new THREE.MeshStandardMaterial({ color: 0x0088aa, roughness: 0.4 });
-//     const wings = new THREE.Mesh(wingGeo, wingMat);
-//     wings.position.z = 0.5;
-//     player.add(wings);
-
-//     // Engine Glow
-//     const engineGeo = new THREE.SphereGeometry(0.3, 16, 16);
-//     const engineMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
-//     const engine = new THREE.Mesh(engineGeo, engineMat);
-//     engine.position.z = 1;
-//     player.add(engine);
-
-//     // Engine Light
-//     const engineLight = new THREE.PointLight(0x00ffff, 1, 10);
-//     engineLight.position.set(0, 0, 1.5);
-//     player.add(engineLight);
-
-//     scene.add(player);
-// }

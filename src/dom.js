@@ -12,6 +12,9 @@ const dom = {
     closeHelp: document.getElementById('close-help'),
     resumeBtn: document.getElementById('resume-btn'),
     container: document.getElementById('game-container'),
+    modelOne: document.getElementById('model-1'),
+    modelTwo: document.getElementById('model-2'),
+    modelThree: document.getElementById('model-3'),
 };
 
 
