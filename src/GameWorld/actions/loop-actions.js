@@ -1,10 +1,10 @@
-import sfx from "../../Audio/sfx.js";
-import { gameplayActions } from "./gameplay-actions.js";
-import { renderActions } from "./render-actions.js";
-import { state, particles, collectibles, obstacles } from "../constants.js";
-import { stars } from "../models/stars.js";
-import { player } from "../models/player.js";
-import { scene } from "../world.js";
+import sfx from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/sfx.js";
+import { gameplayActions } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/actions/gameplay-actions.js";
+import { renderActions } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/actions/render-actions.js";
+import { state, particles, collectibles, obstacles } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
+import { stars } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/stars.js";
+import { player } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/player.js";
+import { scene } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/world.js";
 
 export const loopActions = {
     moveStars() {

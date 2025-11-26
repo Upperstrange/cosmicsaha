@@ -1,9 +1,9 @@
-import { addRenderer } from "./core/renderer.js";
-import { addCamera } from "./core/camera.js";
-import { addFog } from "./core/fog.js";
-import { addLights } from "./core/lights.js";
-import { addPlayer } from "./models/player.js"
-import { addStars } from "./models/stars.js"
+import { addRenderer } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/renderer.js";
+import { addCamera } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/camera.js";
+import { addFog } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/fog.js";
+import { addLights } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/lights.js";
+import { addPlayer } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/player.js"
+import { addStars } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/stars.js"
 import * as THREE from 'three';
 
 export const scene = new THREE.Scene();
@@ -20,3 +20,4 @@ export default function loadWorld() {
     //loadPlayerModel(scene, "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/spaceship-low.glb", 0.3);
     addStars(scene);
 }
+

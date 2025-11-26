@@ -1,8 +1,8 @@
-import sfx from "../../Audio/sfx.js";
-import dom from "../../dom.js";
-import { state, obstacles, collectibles } from "../constants.js";
-import { player } from "../models/player.js";
-import { scene } from "../world.js";
+import sfx from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/sfx.js";
+import dom from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/dom.js";
+import { state, obstacles, collectibles } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
+import { player } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/player.js";
+import { scene } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/world.js";
 
 export const gameplayActions = {
     updateHUD() {

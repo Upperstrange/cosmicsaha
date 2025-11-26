@@ -1,12 +1,12 @@
-import sfx from "../Audio/sfx.js";
-import { spawnRate, baseSpeed as baseSpeedDefault, state } from "./constants.js";
-import { loopActions } from "./actions/loop-actions.js";
-import { controlActions } from "./actions/control-actions.js";
-import { renderActions } from "./actions/render-actions.js";
-import { player } from "./models/player.js";
-import { camera } from "./core/camera.js";
-import { renderer } from "./core/renderer.js";
-import { scene } from "./world.js";
+import sfx from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/sfx.js";
+import { spawnRate, baseSpeed as baseSpeedDefault, state } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
+import { loopActions } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/actions/loop-actions.js";
+import { controlActions } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/actions/control-actions.js";
+import { renderActions } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/actions/render-actions.js";
+import { player } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/player.js";
+import { camera } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/camera.js";
+import { renderer } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/renderer.js";
+import { scene } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/world.js";
 
 export default function animate() {
     let baseSpeed = baseSpeedDefault

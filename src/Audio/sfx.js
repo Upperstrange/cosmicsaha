@@ -1,8 +1,8 @@
-import { getAudioContext } from "./audioContext.js";
-import { loadBuffersMap } from "./loaders.js";
-import { makeEngine, playBeepPickup, playDamageSweep, playNoiseExplosion } from "./generators.js";
+import { getAudioContext } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/audioContext.js";
+import { loadBuffersMap } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/loaders.js";
+import { makeEngine, playBeepPickup, playDamageSweep, playNoiseExplosion } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/generators.js";
 import { animeSounds } from "./constants.js";
-import dom from "../dom.js";
+import dom from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/dom.js";
 
 
 const sfx = {

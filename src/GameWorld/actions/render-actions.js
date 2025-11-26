@@ -1,7 +1,7 @@
-import {collectibleMat} from "../models/collectibles.js";
-import {obstacleMat} from "../models/obstacles.js";
-import { obstacles, collectibles, particles } from "../constants.js";
-import { scene } from "../world.js";
+import {collectibleMat} from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/collectibles.js";
+import {obstacleMat} from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/obstacles.js";
+import { obstacles, collectibles, particles } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
+import { scene } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/world.js";
 import * as THREE from 'three';
 
 export const renderActions = {

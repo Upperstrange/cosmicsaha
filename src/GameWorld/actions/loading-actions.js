@@ -1,7 +1,7 @@
-import { state, spawnRate, baseSpeed as baseSpeedDefault, keys } from "../constants.js";
-import sfx from "../../Audio/sfx.js";
-import dom from "../../dom.js";
-import { gameplayActions } from "./gameplay-actions.js";
+import { state, spawnRate, baseSpeed as baseSpeedDefault, keys } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
+import sfx from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/Audio/sfx.js";
+import dom from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/dom.js";
+import { gameplayActions } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/actions/gameplay-actions.js";
 
 
 export const loadingActions = {

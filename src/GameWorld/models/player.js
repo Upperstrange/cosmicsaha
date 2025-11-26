@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { textureLoader, modelLoader } from "./loaders.js";
+import { textureLoader, modelLoader } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/loaders.js";
 
 export const player = new THREE.Group();
 

@@ -1,7 +1,7 @@
-import { keys, state } from "../constants.js";
-import { camera } from "../core/camera.js";
-import { player } from "../models/player.js";
-import { renderer } from "../core/renderer.js";
+import { keys, state } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/constants.js";
+import { camera } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/camera.js";
+import { player } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/models/player.js";
+import { renderer } from "https://cdn.jsdelivr.net/gh/Upperstrange/cosmicsaha/src/GameWorld/core/renderer.js";
 import * as THREE from 'three';
 
 export const controlActions = {
