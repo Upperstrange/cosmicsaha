@@ -8,6 +8,7 @@ export const loadingActions = {
     loadGame() {
         this.loadDifficulty();
         this.loadUIEvents();
+        this.loadPlayerModel();
     },
     loadUIEvents() {
         // UI events
